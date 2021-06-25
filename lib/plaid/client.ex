@@ -39,7 +39,7 @@ defmodule Plaid.Client do
       |> Jason.encode!()
 
     :post
-    |> request(url, payload, recv_timeout: 15_000)
+    |> request(url, payload, recv_timeout: 60_000)
     |> handle_response(castable_module)
   end
 
